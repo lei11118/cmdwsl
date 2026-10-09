@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+
+# PyInstaller 打包产物
+build/
+dist/
+
+# 本地工具配置
+.claude/

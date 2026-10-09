@@ -1,0 +1,11 @@
+[
+  {
+    "command": "hermes-web-ui start",
+    "env": "WSL",
+    "enabled": true,
+    "cmd_type": "service",
+    "ready_signal": "",
+    "retry_delay": 3,
+    "max_retries": 0
+  }
+]
