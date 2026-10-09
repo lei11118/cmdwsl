@@ -6,12 +6,19 @@ import locale
 import os
 import re
 import subprocess
+import sys
 import threading
 import time
 import tkinter as tk
 from tkinter import ttk, messagebox, scrolledtext
 
-CONFIG_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "hermes_commands.json")
+# 打包为 exe（PyInstaller 冻结）后 __file__ 指向临时解包目录；
+# 配置必须固定读写「exe 同目录」，源码运行时即脚本同目录。
+if getattr(sys, "frozen", False):
+    _BASE_DIR = os.path.dirname(os.path.abspath(sys.executable))
+else:
+    _BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CONFIG_FILE = os.path.join(_BASE_DIR, "hermes_commands.json")
 
 # Detect system encoding for subprocess output
 SYS_ENCODING = locale.getpreferredencoding(False) or "utf-8"

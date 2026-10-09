@@ -4,6 +4,10 @@
 
 Windows GUI 小工具（Python + Tkinter，单文件），为「开机 / 日常要跑的几条命令」提供一个可视化管理面板。
 
+## 下载（Windows 免安装）
+
+不想装 Python？直接到 [Releases](https://github.com/lei11118/cmdwsl/releases/latest) 下载单文件 `hermes_runner.exe`，双击即用（配置保存在 exe 同目录的 `hermes_commands.json`）。
+
 ## 特性
 
 - 📋 **表格管理**：增删命令、上下排序、双击单元格编辑，表格顺序即执行顺序
